@@ -12,11 +12,11 @@
       state: started
       enabled: yes
   - name: connect to mysql
-    community.mysql.mysql_db:
+    community.mysql.mysql_info:
       login_user: root
       login_password: ExpenseApp@1
       login_host: mysql.devaws.fun
     register: mysql_info
   - name: print the output
     ansible.builtin.debug:
-      msg: "{{ mysql_info }}"    
+      msg: "MYSQL INFO: {{ mysql_info }}"    
