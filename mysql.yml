@@ -19,4 +19,4 @@
     register: mysql_info
   - name: print the output
     ansible.builtin.debug:
-      msg: "MYSQL info: {{ mysql_info }}"    
+      msg: "{{ mysql_info }}"    
