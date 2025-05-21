@@ -3,7 +3,7 @@
   become: yes
   tasks: 
     - name: install nginx
-      ansible.builtin.package:
+      ansible.builtin.dnf:
         name: nginx
         state: installed
 
@@ -19,7 +19,7 @@
         state: absent
         path: /usr/share/nginx/html 
 
-    - name: Delete the directory
+    - name: create the directory
       ansible.builtin.file:
         state: directory
         path: /usr/share/nginx/html 
